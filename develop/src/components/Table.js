@@ -8,7 +8,7 @@ function Table() {
     const { sortFunc } = useGet(url);
     const { displayedEmployees} = useContext(Employee)
 
-    return (
+    return(
         <table>
             <thead>
                 <tr>
@@ -36,6 +36,7 @@ function Table() {
                 )}
             </tbody>
         </table>
-    )
-}
+    );
+};
+
 export default Table;

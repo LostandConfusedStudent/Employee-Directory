@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function TableRows(){
     return(
@@ -10,6 +10,7 @@ function TableRows(){
             <td>pfsun9999@msn.com</td>
             <td>97</td>
         </tr>
-    )
-}
+    );
+};
+
 export default TableRows;
