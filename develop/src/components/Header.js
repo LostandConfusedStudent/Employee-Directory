@@ -1,9 +1,11 @@
 import React from "react";
 import Search from "./Search.js"
 
-function Header(){
+
+function Navbar(){
+    // used as the navbar for the site.
     return(
-        <div className="header">
+        <div className="navbar">
             <div>Employee Directory</div>
             <div>
                 <div>Employee Search: </div>
@@ -12,4 +14,4 @@ function Header(){
         </div>
     )
 }
-export default Header;
+export default Navbar;

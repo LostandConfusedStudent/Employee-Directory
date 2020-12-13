@@ -52,6 +52,7 @@ const isLocalhost = Boolean(
                 }
               } else {
                 console.log("Content is cached for offline use.");
+
                 if (config && config.onSuccess) {
                   config.onSuccess(registration);
                 }
@@ -82,14 +83,14 @@ const isLocalhost = Boolean(
           });
         } else {
           registerValidSW(swUrl, config);
-        }
+        };
       })
       .catch(() => {
         console.log(
           "No internet connection found. App is running in offline mode."
         );
       });
-  }
+  };
   
   export function unregister() {
     if ("serviceWorker" in navigator) {

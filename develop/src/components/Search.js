@@ -1,12 +1,11 @@
 import React, {useState, useContext} from "react";
-import { Employee } from "./Employee.js";
+import { EmployeeContext } from "./EmployeeContext.js";
 
-function Search() {
-
+function Search(){
     const [search, setSearch] = useState("")
-    const {employees, setDisplayedEmployees} = useContext(Employee)
+    const {employees, setDisplayedEmployees} = useContext(EmployeeContext)
     
-    function updateSearch({ target }){
+    function updateSearch({target}){
         const searchTerm = target.value
         setSearch(searchTerm)
         const filterResult = employees.filter(function(employee){
@@ -15,7 +14,8 @@ function Search() {
         setDisplayedEmployees([...filterResult])
     };
     return(
-       <input type="text" onChange= { updateSearch } value={ search }></input>
+       <input type="text" onChange= {updateSearch} value={search}></input>
     );
 };
+
 export default Search;

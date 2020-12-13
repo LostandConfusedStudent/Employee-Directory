@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react";
-import { useGet } from "../hooks/api.js"
+import { useGet } from "../hooks/API.js"
 import Button from "./Button.js"
-import { Employee } from "./Employee.js";
+import { EmployeeContext } from "./EmployeeContext.js";
 
 function Table() {
     const [url] = useState("https://randomuser.me/api/?results=10")
     const { sortFunc } = useGet(url);
-    const { displayedEmployees} = useContext(Employee)
+    const { displayedEmployees} = useContext(EmployeeContext)
 
-    return(
+    return (
         <table>
             <thead>
                 <tr>
@@ -31,12 +31,11 @@ function Table() {
                             <td>{employee.email}</td>
                             <td>{employee.dob.age}</td>
                         </tr>
-                    )
+                    );
                 }
                 )}
             </tbody>
         </table>
     );
 };
-
 export default Table;
